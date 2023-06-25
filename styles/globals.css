@@ -8,7 +8,32 @@
 	padding: 0;
 }
 
+body {
+	@apply font-inter text-zinc-900;
+}
+
 input {
-	border: none;
-	outline: none;
+	@apply w-full font-inter font-normal text-sm border-none outline-none text-zinc-900;
+}
+
+input[type='date'] {
+	text-transform: uppercase;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+	background: url('/icons/calendar.svg') no-repeat;
+	background-size: cover;
+	color: black;
+	width: 20px;
+	height: 20px;
+}
+
+.toggle-circle {
+	top: 50%;
+	left: 50%;
+	transform: translate(-100%, -50%);
+}
+
+.toggle-circle.active {
+	transform: translate(0%, -50%);
 }

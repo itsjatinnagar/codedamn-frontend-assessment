@@ -14,7 +14,7 @@ const SearchBar = () => {
 			</div>
 			<div className=''>
 				<div className='flex items-center gap-x-1 rounded-md px-[8px] py-[4px] bg-zinc-100'>
-					<p className='font-inter text-sm text-zinc-500'>Courses</p>
+					<p className='text-sm text-zinc-500'>Courses</p>
 					<Image
 						src='/icons/arrow.svg'
 						alt='codedamn arrow down'
@@ -43,7 +43,7 @@ const Profile = () => {
 					width='20'
 					height='21'
 				/>
-				<span className='absolute top-0 left-1/3 font-inter font-bold text-sm text-white'>
+				<span className='absolute top-0 left-1/3 font-bold text-sm text-white'>
 					5
 				</span>
 			</div>
@@ -60,7 +60,7 @@ const Rewards = () => {
 				width='24'
 				height='24'
 			/>
-			<p className='font-inter font-extrabold text-base text-zinc-500'>2</p>
+			<p className='font-extrabold text-base text-zinc-500'>2</p>
 		</div>
 	);
 };
@@ -70,18 +70,16 @@ const Notification = () => {
 		<div className='relative '>
 			<Image src='/icons/bell.svg' alt='codedamn bell' width='24' height='24' />
 			<div className='absolute -top-1 -right-1 bg-pink-500 h-4 w-4 rounded-full text-center'>
-				<span className='font-inter font-bold text-xs text-white align-top'>
-					1
-				</span>
+				<span className='font-bold text-xs text-white align-top'>1</span>
 			</div>
 		</div>
 	);
 };
 
-const Nav = () => {
+const NavBar = () => {
 	return (
 		<div className='container mx-auto py-2 flex items-center justify-between'>
-			<h1 className='font-inter font-bold text-2xl text-zinc-900'>codedamn</h1>
+			<h1 className='font-bold text-2xl text-zinc-900'>codedamn</h1>
 			<div className='flex items-center gap-x-6'>
 				<SearchBar />
 				<div className='flex items-center gap-x-6'>
@@ -96,4 +94,4 @@ const Nav = () => {
 	);
 };
 
-export default Nav;
+export default NavBar;
