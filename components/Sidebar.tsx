@@ -22,7 +22,7 @@ const ITEMS = [
 	{
 		id: '3',
 		name: 'Resume',
-		slug: '/',
+		slug: '/edit/resume',
 	},
 ];
 

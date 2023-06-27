@@ -56,6 +56,12 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	@apply bg-zinc-100 btn;
 }
 
+.btn-transparent {
+	@apply rounded-md py-2 pl-2 pr-3 border;
+	background-color: rgba(255, 255, 255, 0.16);
+	border-color: rgba(244, 244, 245, 0.32);
+}
+
 .divide-list span {
 	margin-left: 16px;
 	position: relative;
