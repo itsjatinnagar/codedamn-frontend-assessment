@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Avatar from '@/components/Avatar';
+import Link from 'next/link';
 
 const SearchBar = () => {
 	return (
@@ -12,16 +14,14 @@ const SearchBar = () => {
 				/>
 				<input type='text' name='search' id='search' placeholder='Search' />
 			</div>
-			<div className=''>
-				<div className='flex items-center gap-x-1 rounded-md px-[8px] py-[4px] bg-zinc-100'>
-					<p className='text-sm text-zinc-500'>Courses</p>
-					<Image
-						src='/icons/arrow.svg'
-						alt='codedamn arrow down'
-						width='14'
-						height='14'
-					/>
-				</div>
+			<div className='flex items-center gap-x-1 rounded-md px-[8px] py-[4px] bg-zinc-100'>
+				<p className='text-sm text-zinc-500'>Courses</p>
+				<Image
+					src='/icons/arrow.svg'
+					alt='codedamn arrow down'
+					width='14'
+					height='14'
+				/>
 			</div>
 		</div>
 	);
@@ -30,12 +30,7 @@ const SearchBar = () => {
 const Profile = () => {
 	return (
 		<div className='relative'>
-			<Image
-				src='/images/profile_pic.png'
-				alt='codedamn profile'
-				width='42'
-				height='42'
-			/>
+			<Avatar src='/images/profile_pic.png' alt='codedamn profile' size='42' />
 			<div className='absolute -top-1 -right-1'>
 				<Image
 					src='/images/polygon.svg'
@@ -68,7 +63,7 @@ const Rewards = () => {
 const Notification = () => {
 	return (
 		<div className='relative '>
-			<Image src='/icons/bell.svg' alt='codedamn bell' width='24' height='24' />
+			<Image src='/icons/bell.svg' alt='notification' width='24' height='24' />
 			<div className='absolute -top-1 -right-1 bg-pink-500 h-4 w-4 rounded-full text-center'>
 				<span className='font-bold text-xs text-white align-top'>1</span>
 			</div>
@@ -79,7 +74,9 @@ const Notification = () => {
 const NavBar = () => {
 	return (
 		<div className='container mx-auto py-2 flex items-center justify-between'>
-			<h1 className='font-bold text-2xl text-zinc-900'>codedamn</h1>
+			<Link href='/'>
+				<h1 className='font-bold text-2xl text-zinc-900'>codedamn</h1>
+			</Link>
 			<div className='flex items-center gap-x-6'>
 				<SearchBar />
 				<div className='flex items-center gap-x-6'>

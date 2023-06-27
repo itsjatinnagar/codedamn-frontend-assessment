@@ -12,8 +12,10 @@ body {
 	@apply font-inter text-zinc-900;
 }
 
-input {
-	@apply w-full font-inter font-normal text-sm border-none outline-none text-zinc-900;
+input,
+textarea,
+select {
+	@apply w-full bg-transparent font-inter font-normal text-sm border-none outline-none text-zinc-900;
 }
 
 input[type='date'] {
@@ -28,12 +30,54 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	height: 20px;
 }
 
-.toggle-circle {
+.toggle .thumb {
 	top: 50%;
 	left: 50%;
 	transform: translate(-100%, -50%);
 }
 
-.toggle-circle.active {
+.toggle.active .track {
+	@apply bg-indigo-600;
+}
+
+.toggle.active .thumb {
 	transform: translate(0%, -50%);
+}
+
+.btn {
+	@apply rounded-md px-4 py-2;
+}
+
+.btn-primary {
+	@apply bg-indigo-600 text-white btn;
+}
+
+.btn-secondary {
+	@apply bg-zinc-100 btn;
+}
+
+.divide-list span {
+	margin-left: 16px;
+	position: relative;
+}
+
+.divide-list span::before {
+	margin-left: -9px;
+	content: '';
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 4px;
+	height: 4px;
+	background-color: rgb(113 113 122);
+	border-radius: 50%;
+}
+
+.divide-list span:first-child {
+	margin: 0;
+	content: none;
+}
+
+.divide-list span:first-child:before {
+	content: none;
 }

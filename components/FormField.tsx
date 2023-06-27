@@ -2,16 +2,21 @@ import { ReactNode } from 'react';
 
 const FormField = ({
 	children,
+	htmlFor,
 	label,
 	helperText,
 }: {
 	children: ReactNode;
+	htmlFor: string;
 	label: string;
 	helperText?: string;
 }) => {
 	return (
 		<div>
-			<label className='mb-1 block font-semibold text-sm text-zinc-900'>
+			<label
+				htmlFor={htmlFor}
+				className='mb-1 block font-semibold text-sm text-zinc-900'
+			>
 				{label}
 			</label>
 			<div>

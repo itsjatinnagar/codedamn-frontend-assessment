@@ -1,7 +1,5 @@
-import ProfileForm from '@/components/ProfileForm';
-
 const HomePage = () => {
-	return <ProfileForm />;
+	return;
 };
 
 export default HomePage;

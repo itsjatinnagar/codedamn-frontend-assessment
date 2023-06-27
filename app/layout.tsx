@@ -1,8 +1,11 @@
 import { ReactNode } from 'react';
-
-import '@/styles/globals.css';
-import Sidebar from '@/components/SIdebar';
+import { Metadata } from 'next';
 import NavBar from '@/components/NavBar';
+import '@/styles/globals.css';
+
+export const metadata: Metadata = {
+	title: 'Codedamn - Profile',
+};
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
 	return (
@@ -10,10 +13,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
 			<body>
 				<div className='container mx-auto'>
 					<NavBar />
-					<div className='flex justify-between gap-x-20 mt-16 mb-10'>
-						<Sidebar />
-						{children}
-					</div>
+					{children}
 				</div>
 			</body>
 		</html>
