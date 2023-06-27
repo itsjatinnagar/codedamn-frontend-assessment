@@ -4,7 +4,7 @@ This is my submission for the Frontend Developer Take-Home Assignment. The task 
 
 ## Deployment
 
-The assignment has been deployed using Vercel and is accessible at []. You can visit the deployment to interact with the profile page and edit profile form.
+The assignment has been deployed using Vercel and is accessible at https://codedamn-frontend-assessment-psi.vercel.app. You can visit the deployment to interact with the profile page and edit profile form.
 
 ### Routes
 
